@@ -63,6 +63,7 @@ const App = () => {
 
   return (
     <div>
+      <h1 className="quiz-title">Computer Science Quiz</h1>
       {isQuizDone ? (
         <Results
           score={score}

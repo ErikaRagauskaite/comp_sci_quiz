@@ -1,4 +1,5 @@
 import React from "react";
+import he from "he";
 
 const Quiz = ({ question, handleAnswer }) => {
   if (!question) return <div>...Loading...</div>;
@@ -14,7 +15,7 @@ const Quiz = ({ question, handleAnswer }) => {
 
   return (
     <div className="quiz-container">
-      <h2>{questionText}</h2>
+      <h2>{he.decode(questionText)}</h2>
       <div className="answers-btn">
         {answers.map((answer, index) => (
           <button key={index} onClick={() => handleAnswer(answer)}>
